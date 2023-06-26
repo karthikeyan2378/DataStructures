@@ -70,13 +70,19 @@ public class BinaryTree {
         System.out.println("key inside insert = " + key);
         root = BinarySearchTreeImplementation.insertNode(root, key);
     }
-    public static void main(String[] args) {
+
+    public static  BinaryTree createSampleBinaryTree()
+    {
         BinaryTree tree = new BinaryTree();
         tree.root =  new Node(1);
         tree.root.left = new Node(2);
         tree.root.right = new Node(3);
         tree.root.left.left = new Node(4);
         tree.root.left.right = new Node(5);
+        return tree;
+    }
+    public static void main(String[] args) {
+        BinaryTree tree = createSampleBinaryTree();
 
         /*
         * BFS Traversal , inorder, preorder, postorder
