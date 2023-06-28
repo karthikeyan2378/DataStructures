@@ -1,6 +1,6 @@
-package Concepts.LinkedList;
+package LinkedList;
 
-import com.sun.xml.internal.bind.v2.TODO;
+
 
 class LinkedList
 {

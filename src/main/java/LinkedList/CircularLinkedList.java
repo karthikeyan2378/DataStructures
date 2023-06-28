@@ -1,4 +1,4 @@
-package Concepts.LinkedList;
+package LinkedList;
 
 class CircularLinkedList {
     CircularNode head;

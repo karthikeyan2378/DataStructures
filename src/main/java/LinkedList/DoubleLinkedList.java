@@ -1,6 +1,5 @@
-package Concepts.LinkedList;
+package LinkedList;
 
-import jdk.internal.org.objectweb.asm.util.CheckSignatureAdapter;
 
 public class DoubleLinkedList {
     static class DoubleNode{
