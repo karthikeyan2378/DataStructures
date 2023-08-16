@@ -10,13 +10,13 @@ public class NielsenQuestion1 {
 
         StringBuffer sb = new StringBuffer();
 
-        for (int i = 0; i < arr.length; i++) {
-            sb.append(arr[i]);
+        for (String item : arr) {
+            sb.append(item);
         }
         res.add(sb.toString());
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr.length; j++) {
-                res.add(arr[i]+arr[j]);
+        for (String s : arr) {
+            for (String value : arr) {
+                res.add(s + value);
             }
         }
 
@@ -32,8 +32,8 @@ public class NielsenQuestion1 {
             char[] f = a.toCharArray();
             int length =  f.length;
             Set<Character>f1 = new HashSet<>();
-            for (int i = 0; i < f.length; i++) {
-                f1.add(f[i]);
+            for (char c : f) {
+                f1.add(c);
             }
             int length2 = f1.size();
 
