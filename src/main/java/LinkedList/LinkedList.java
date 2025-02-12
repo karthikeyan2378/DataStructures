@@ -108,10 +108,14 @@ class LinkedList
         Node current = head;
         Node next = null;
         while (current != null){
+            System.out.println("current.data = " + current.data);
             next = current.next;
+
             current.next = prev;
             prev = current;
             current = next;
+            System.out.println("next.data = " + next.data);
+            System.out.println("prev.data = " + prev.data);
         }
 
         head = prev;
@@ -142,9 +146,8 @@ class LinkedList
         System.out.println("PushedAttheMIDDLE");
         llist.printList(llist.head);
         llist.searchIterative(6);
-        System.out.println("findx = " + llist.searchIterative(6));
-        System.out.println("findx1 = " + llist.searchRecursive(llist.head, 2));
-       // reverse(llist.head);
-        deleteAtBegin(llist.head);
+
+        reverse(llist.head);
+       // deleteAtBegin(llist.head);
     }
 }
