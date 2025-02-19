@@ -1,17 +1,16 @@
-package Recursion;
+package RecursionStriver;
 
-public class PrintLinear {
+public class PrintN {
     private static int printN(int count, int n){
-        if(count == 0)
+        if(count>n)
             return 0;
-        System.out.println(count);
-        count--;
+        System.out.println("Karthik"+count);
+        count++;
 
         return printN(count, n);
 
     }
     public static void main(String[] args) {
-        printN(5, 5);
+        printN(1, 5);
     }
 }
-

@@ -1,4 +1,4 @@
-package Recursion;
+package RecursionStriver;
 
 public class ReverseArray {
     private  static  int[] a = {1,2,3,4,5};

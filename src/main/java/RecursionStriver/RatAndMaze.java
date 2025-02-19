@@ -1,4 +1,4 @@
-package Recursion;
+package RecursionStriver;
 /*https://takeuforward.org/data-structure/rat-in-a-maze/*/
 import java.util.*;
 

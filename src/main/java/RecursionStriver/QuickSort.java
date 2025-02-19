@@ -1,4 +1,4 @@
-package Recursion;
+package RecursionStriver;
 
 public class QuickSort {
     public static void main(String[] args) {

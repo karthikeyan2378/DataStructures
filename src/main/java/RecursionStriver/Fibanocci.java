@@ -1,4 +1,4 @@
-package Recursion;
+package RecursionStriver;
 
 public class Fibanocci {
     //time complexity will be 2 to the power n times
