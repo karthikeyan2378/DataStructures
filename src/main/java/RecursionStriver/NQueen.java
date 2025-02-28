@@ -8,6 +8,7 @@ public class NQueen {
         int n = 4;
         char[][] board = new char[n][n];
         int[] leftRow = new int[n];
+        //hashSize for diagonal if n=8 -> 2*8-1= 15 -> from 0 to 14 14 sized hash table
         int[] upperDiagonal = new int[2 * n - 1];
         int[] lowerDiagonal = new int[2 * n - 1];
         List<List<String>> ans = new ArrayList<>();
@@ -30,6 +31,7 @@ public class NQueen {
         }
     }
 
+    //hashing technique instead of 3 loops in recursion
     private static void solve(int col, char[][] board, int[] leftRow, int[] upperDiagonal, int[] lowerDiagonal, List<List<String>> ans, int n) {
         if (col == n) {
             ans.add(constructBoard(board));
@@ -38,7 +40,7 @@ public class NQueen {
 
         for (int row = 0; row < n; row++) {
             if (leftRow[row] == 0 && lowerDiagonal[row + col] == 0 && upperDiagonal[(n - 1) + col - row] == 0) {
-                // Place the queen
+                // Place the queen and mark as 1 for completed rows
                 board[row][col] = 'Q';
                 leftRow[row] = 1;
                 lowerDiagonal[row + col] = 1;
@@ -46,7 +48,7 @@ public class NQueen {
 
                 solve(col + 1, board, leftRow, upperDiagonal, lowerDiagonal, ans, n);
 
-                // Backtrack
+                // Backtrack and mark again as 0 for next row
                 board[row][col] = '.';
                 leftRow[row] = 0;
                 lowerDiagonal[row + col] = 0;
