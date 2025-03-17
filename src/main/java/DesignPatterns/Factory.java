@@ -28,6 +28,12 @@ class Square implements Shape {
     }
 }
 
+class Hexagon implements Shape {
+    @Override
+    public void draw() {
+        System.out.println("Hexagon = " + true);
+    }
+}
 class ShapeFactory{
     public Shape getShape(String shapeType){
         if(shapeType == null){
@@ -42,6 +48,10 @@ class ShapeFactory{
         } else if(shapeType.equalsIgnoreCase("SQUARE")){
             return new Square();
         }
+        else if(shapeType.equalsIgnoreCase("HEXAGON"))
+        {
+            return new Hexagon();
+        }
         return null;
     }
 }
@@ -55,6 +65,8 @@ public class Factory {
         s2.draw();
         Shape s3 = s.getShape("square");
         s3.draw();
+        Shape s4 = s.getShape("hexagon");
+        s4.draw();
 
     }
 }
