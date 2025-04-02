@@ -1,4 +1,4 @@
-package DesignPatterns;
+package DesignPatterns.Creational;
 
 // Step 1: Define the Builder Interface
 interface CarBuilder {
@@ -94,7 +94,7 @@ class Main {
         for(type type :type.values())
             System.out.println("type = " + type);
 
-        type type = DesignPatterns.type.valueOf("MANUAL");
+        type type = DesignPatterns.Creational.type.valueOf("MANUAL");
         System.out.println("type = " + type);
     }
 }
